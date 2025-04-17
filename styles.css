@@ -1,0 +1,149 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url('Background.jpg') no-repeat center center/cover;
+    margin: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+.avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.dark-mode {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+#clock {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #11b1e7;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background: #218838;
+    transform: scale(1.05);
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+li {
+    background: #eee;
+    margin: 5px 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+li img {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #4CAF50; /* Green for completed tasks */
+    opacity: 0.7;
+}
+
+.completed::before {
+    content: "✔️ ";
+    margin-right: 5px;
+}
+
+.delete {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: background 0.3s;
+}
+
+.delete:hover {
+    background: darkred;
+}
+
+.task-note {
+    display: none;
+    font-size: 14px;
+    color: #555;
+    background: #f9f9f9;
+    padding: 5px;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+.fade-out {
+    animation: fadeOut 0.3s forwards;
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; transform: scale(1); }
+    to { opacity: 0; transform: scale(0.9); }
+}

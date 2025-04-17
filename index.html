@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <img src="todo image.jpg" alt="User Avatar" class="avatar">
+        <h2>Smart To-Do List</h2>
+        <button id="themeToggle">🌙 Toggle Dark Mode</button>
+        <div id="clock"></div>
+
+        <input type="text" id="taskInput" placeholder="Add a new task...">
+        <textarea id="taskMessage" placeholder="Add a note (optional)..."></textarea>
+        <button id="voiceInput">🎤 Voice Input</button>
+        <input type="datetime-local" id="taskTime">
+        <button onclick="addTask()">Add Task</button>
+
+        <h3>Tasks</h3>
+       <ul id="taskList"></ul>
+        
+        <h3>Completed Tasks</h3>
+        <ul id="completedTasks"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
